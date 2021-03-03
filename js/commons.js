@@ -39,13 +39,14 @@ function insertFooter() {
     const footer = ` 
         <footer>
             <div class="copyright">
-                <p>© Andrea Lam 2020</p>
+                © Andrea Lam 2021
             </div>
+            <!-- Removing socials from the bottom of my page
             <div class="social">
-                <!-- this will be image, not p -->
-                <p>linkedin</p>
-                <p>instagram</p>
-            </div>
+                where am i
+                <a href="https://www.linkedin.com/in/andrearlam/><img src="img/social_linkedin1.png" width="30" height ="30"></a>
+                <a href="https://www.instagram.com/1littlelam.jpg/><img src="img/ig.png" width="30" height ="30"></a>
+            </div> -->
         </footer>  
     `
     
