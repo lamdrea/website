@@ -8,6 +8,7 @@ body {
     font-weight: 400;
     font-size: 20px;
     max-width: 92%;
+    line-height:1.25;
     /* border-style: solid; */
 }
 
@@ -71,29 +72,40 @@ header {
     margin: auto;
     margin-bottom: 5%;
     margin-top:
-    background-color: #ddd;
+    /* background-color: #gray; */
 }
 
 h2 {
     font-size: 35px;
     font-family: 'Rubik';
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 22px;
+    font-family: 'Rubik';
+    font-weight: 300;
     text-transform: uppercase;
 }
 
 footer {
     position: absolute;
-    bottom: 0;
-    left: 5%;
-    width: 90%;
+    bottom: 10;
+    /* left: 5%; */
+    width: 100%;
     height: 50px;
     text-align: center; 
-    font-family: 'Karla', sans-serif;
     /* background-color: #883c3c; */
+}
+
+.copyright {
+    float: right;
+    font-family: 'Karla';
+    font-weight:300;
+    font-size:16px;
+    color: lightgray;
+    padding-bottom:1em;
+    padding-right:.5em;
 }
 
 .title {
@@ -111,11 +123,15 @@ footer {
     text-decoration: none;
 }
 
+.title a:hover{
+    color:black;
+}
+
 .title p {
     /* this allows us to vertically align title text */
     /* look into other ways to do this */
-    margin: 30px 0px;
-    font-size: 38px;
+    margin: 26px 0px;
+    font-size: 43px;
 }
 
 .topnav {
@@ -134,18 +150,19 @@ footer {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 19px;
+    font-weight:400;
     /* this allows us to vertically align title text */
     margin: 30px 0px;
 }
 
 .topnav a:hover {
     /* background-color: #ddd; */
-    color: black;
+    color: lightseagreen;
 }
 
 .topnav a.active {
     /* background-color: #4CAF50; */
-    color: lightgray;
+    color: black;
     /* text-decoration: underline 1px; */
 
 }
@@ -161,19 +178,18 @@ footer {
 .social img {
     width: 16;
     height: 16;
-    padding: 0px 5px;
-    padding-bottom:16px;
-    vertical-align:sub;
+    padding: 0px 8px;
+    padding-bottom:15px;
+    /* vertical-align:sub; */
 }
 
-.copyright {
-    float: right;
-    font-family: 'Karla';
-    font-weight:300;
-    font-size:16px;
-    color: lightgray;
-    padding-bottom:1em;
+a{
+    color:lightcoral;
+    text-decoration:none;
+}
 
+a:hover{
+    color:lightseagreen;
 }
 
 form {
@@ -184,13 +200,17 @@ form {
 form fieldset {
     height: 1em;
     padding-bottom:1em;
-    border: 1;
+    padding-left:0;
+    border:0;
+    margin-bottom:.5em;
+    /* background-color:red; */
 }
 
 textarea{
     width:550px;
     background-color:rgb(241, 241, 241);
-    padding:15px 20px;
+    margin-top:.3em;
+    padding:.8em 1em;
     border: 2px solid lightgray;
     font-family:inherit;
     font-size:17px;
@@ -199,7 +219,8 @@ textarea{
 input[type=text]{
     width:550px;
     background-color:rgb(241, 241, 241);
-    padding:15px 20px;
+    margin-top:.3em;
+    padding:.8em 1em;
     border: 2px solid lightgray;
     font-family:inherit;
     font-size:17px;
@@ -208,14 +229,53 @@ input[type=text]{
 input[type=source]{
     width:550px;
     background-color:rgb(241, 241, 241);
-    padding:15px 20px;
+    margin-top:.3em;
+    padding:.8em 1em;
     border: 2px solid lightgray;
     font-family:inherit;
     font-size:17px;
-    
 }
 
-.formLabel{
-    margin-bottom:30px;
-    line-height:2;
+.button{
+    background-color: black;
+    border:0;
+    color:white;
+    text-align:center;
+    font-family:'Karla';
+    font-size:24px;
+    font-weight:200;
+    text-transform:uppercase;
+    padding: .75em 1.2em;
+    cursor:pointer;
+    transition-duration:.2s;
+}
+
+.button:hover{
+    background-color:rgb(235, 235, 235);
+}
+
+.button:active{
+    transform:translate(1px,2px);
+}
+
+.smallButton{
+    background-color:black;
+    border:0;
+    color:white;
+    text-align:center;
+    font-family:'Karla';
+    font-size:18px;
+    font-weight:300;
+    text-transform:uppercase;
+    padding: .75em 1em;
+    cursor:pointer;
+    transition-duration:.2s;
+}
+
+.smallButton:hover{
+    background-color:lightgray;
+}
+
+.smallButton:active{
+    transform:translate(1px,2px);
 }

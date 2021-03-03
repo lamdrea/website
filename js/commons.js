@@ -46,7 +46,7 @@ function insertFooter() {
     const footer = ` 
         <footer>
             <div class="copyright">
-                © Andrea Lam 2021
+                <p>© Andrea Lam 2021</p>
             </div>
         </footer>  
     `

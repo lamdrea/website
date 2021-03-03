@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
         <script type="text/javascript" src="js/commons.js"></script>
         <script type="text/javascript" src="js/gallery.js"></script>
     </head>
@@ -31,33 +31,34 @@
                 <!-- dummyframe for redirection instead of Google Form -->
                 <iframe name="dummyframe" id="dummyframe" style="display: none;" onload="if(submitted) { processSubmit(); }"></iframe>
 
-                <form id="right" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQVTGnMgLdjgPTjPCavOHlioyFAWS8UfgyY_52zjRY7-Dpxw/formResponse" 
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQVTGnMgLdjgPTjPCavOHlioyFAWS8UfgyY_52zjRY7-Dpxw/formResponse" 
                     method="post" target="dummyframe" onsubmit="submitted=true;">
                     <fieldset>
-                        <label class="formLabel">Name *</label>
+                        <label>Name *</label>
                         <input type="text" tabindex="1" name="entry.349139440" required autofocus>
                     </fieldset>
                     <br><br>
                     <fieldset>
-                        <label class="formLabel">Email *</label>
+                        <label>Email *</label>
                         <input type="text" tabindex="2" name="entry.1927541922" required>
                     </fieldset> 
                     <br><br>
                     <fieldset>
-                        <label class="formLabel">Message *</label>
+                        <label>Message *</label>
                         <textarea placeholder="Project ideas, questions, comments, etc." tabindex="3" name="entry.422534850" rows="10" cols="40" maxlength="1000" required></textarea>
                     </fieldset>
-                    <br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br>
                     <fieldset>
-                        <label class="formLabel">How did you hear about me?</label>
+                        <label>How did you hear about me?</label>
+                        <!-- question for jason: why is this type "source" instead of text -->
                         <input type="source" tabindex="4" name="entry.1989488195" optional>
                     </fieldset>
                     <br><br><br>
                     <fieldset>
-                        <input id="submit" type="submit" value="Submit" style="display: block;">
+                        <input id="submit" type="submit" class="button" value="Submit" style="display: inline-block">
                     </fieldset>
-                    <br><br><br>
-                    <label id="thankyou" style="margin-left: 1em; display: none;">Thank you for your submission!</label>
+                    <br>
+                    <label id="thankyou" style="font-size:17px; font-style:italic; color:rgb(189, 189, 189); display: none">Thank you! I'll get back to you soon.</label>
                 </form>
             </div>
         </div>
