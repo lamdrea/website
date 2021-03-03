@@ -24,12 +24,12 @@ function insertHeader(page = "") {
                <!-- <a href="work.html">Work</a>  -- commented out wip -->
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <!--<a href="https://www.linkedin.com/in/andrearlam/"><img src="img/icons/social_linkedin2.png" width="30" height="30"></a>
+                <!--<a href="https://www.linkedin.com/in/andrearlam/"><img src="img/icons/social_linkedin.png" width="30" height="30"></a>
                 <a href="https://www.instagram.com/1littlelam.jpg"><img src="img/icons/social_ig.png" width="30" height="30"></a>
             -->   
             </div>
             <div class="social">
-                <a href="https://www.linkedin.com/in/andrearlam/"><img src="img/icons/social_linkedin2.png" width="30" height="30"></a>
+                <a href="https://www.linkedin.com/in/andrearlam/"><img src="img/icons/social_linkedin.png" width="30" height="30"></a>
                 <a href="https://www.instagram.com/1littlelam.jpg"><img src="img/icons/social_ig.png" width="30" height="30"></a>           
             </div>
         </header>
