@@ -183,6 +183,10 @@ footer {
     /* vertical-align:sub; */
 }
 
+.social img:hover{
+    filter:invert(.5);
+}
+
 a{
     color:lightcoral;
     text-decoration:none;

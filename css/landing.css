@@ -1,15 +1,28 @@
 header {
    position: absolute;
-   left: 50%;
-   transform: translate(-50%, 0%);
 }
 
 .title a {
    color: white;
+   margin-left:8vw;
+   display:block;
 }
 
 .topnav a {
    color: white;
+}
+
+.topnav a:hover{
+   color:black;
+}
+
+.social{
+   margin-right:8vw;
+   filter:invert(1);
+}
+
+.social img:hover{
+   filter:invert(1);
 }
 
 .landing {
@@ -29,12 +42,15 @@ header {
    margin: auto;
    width: 80px; 
    height: 80px;
-   border-radius: 50%;
+   border-radius: 80%;
    overflow: hidden;
    cursor: pointer;
+   border-width:2px;
+   border-style: solid;
+   border-color:white;
 }
 
-.landing .play-button-ring:after {
+/* .landing .play-button-ring:after {
    content: "";
    position: absolute;
    left: 50%;
@@ -44,16 +60,16 @@ header {
    width: 75px; 
    height: 75px;
    border: 1000px solid white;
-}
+} */
 
 .landing .play-button-ring:hover {
    background-color: white;
-   transition: 0.10s ease;
+   transition: 0.40s ease;
 }
 
 .landing .play-button-ring:hover ~ .play-button-triangle {
    border-left: 16px solid black;
-   transition: 0.10s ease;
+   transition: 0.40s ease;
 }
 
 .landing .play-button-triangle {
@@ -70,7 +86,7 @@ header {
 }
 
 .landing .background-img {
-   background-color: brown;
+   background-color:brown;
    position: fixed;
    top: 0;
    left: 0;
