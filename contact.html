@@ -2,75 +2,65 @@
     <head>
         <title>Andrea Lam | Biomedical Communicator </title>
         <link type="text/css" rel="stylesheet" href="css/main.css">
-        <link type="text/css" rel="stylesheet" href="css/about.css">
         <link rel="stylesheet" href="https://use.typekit.net/hyu2voi.css">
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
         <script type="text/javascript" src="js/commons.js"></script>
         <script type="text/javascript" src="js/gallery.js"></script>
     </head>
 <body>
     <div class="wrapper">
         <script>insertHeader("contact");</script>
-        <div class="content">
-            <div style="height:10%"></div>
-            <div style="height:5%; min-height:50px;">
-                <h2 align="center">Send me a message!</h2>
+        <div class="contentWrapper">
+            <div class="content">
+                <h2>Send me a message!</h2>
+
+                <script type="text/javascript">
+                    var submitted = false; // flag for stopping Google Form redirect
+                    
+                    // upon form submission, disable submit button and show thank you message
+                    function processSubmit() {
+                        document.getElementById('submit').disabled = true; 
+                        document.getElementById('thankyou').style.display = ''; 
+                    }
+                </script>
+
+                <!-- dummyframe for redirection instead of Google Form -->
+                <iframe name="dummyframe" id="dummyframe" style="display: none;" onload="if(submitted) { processSubmit(); }"></iframe>
+
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQVTGnMgLdjgPTjPCavOHlioyFAWS8UfgyY_52zjRY7-Dpxw/formResponse" 
+                    method="post" target="dummyframe" onsubmit="submitted=true;">
+                    <fieldset>
+                        <label>Name *</label>
+                        <input type="text" tabindex="1" name="entry.349139440" required autofocus>
+                    </fieldset>
+                    <br><br>
+                    <fieldset>
+                        <label>Email *</label>
+                        <input type="text" tabindex="2" name="entry.1927541922" required>
+                    </fieldset> 
+                    <br><br>
+                    <fieldset>
+                        <label>Message *</label>
+                        <textarea placeholder="Project ideas, questions, comments, etc." tabindex="3" name="entry.422534850" rows="10" cols="40" maxlength="1000" required></textarea>
+                    </fieldset>
+                    <br><br><br><br><br><br><br><br><br><br><br>
+                    <fieldset>
+                        <label>How did you hear about me?</label>
+                        <!-- question for jason: why is this type "source" instead of text -->
+                        <input type="source" tabindex="4" name="entry.1989488195" optional>
+                    </fieldset>
+                    <br><br><br>
+                    <fieldset>
+                        <input id="submit" type="submit" class="button" value="Submit" style="display: inline-block">
+                    </fieldset>
+                    <br>
+                    <label id="thankyou" style="font-size:17px; font-style:italic; color:rgb(189, 189, 189); display: none">Thank you! I'll get back to you soon.</label>
+                </form>
             </div>
-
-            <!-- add asterisk require for Name, Email, Message -->
-            <form id="left">
-                <fieldset>
-                    <label>Name</label>
-                </fieldset>
-                <fieldset>
-                    <label>Email Address</label>
-                </fieldset>
-                <fieldset>
-                    <label>Message</label>
-                </fieldset>
-                <br><br><br><br><br><br><br><br><br><br><br>
-                <fieldset>
-                    <label>How did you hear about me? (optional)</label>
-                </fieldset>
-            </form>
-
-
-            <script type="text/javascript">
-                var submitted = false; // flag for stopping Google Form redirect
-                
-                // upon form submission, disable submit button and show thank you message
-                function processSubmit() {
-                    document.getElementById('submit').disabled = true; 
-                    document.getElementById('thankyou').style.display = ''; 
-                }
-            </script>
-
-            <!-- dummyframe for redirection instead of Google Form -->
-            <iframe name="dummyframe" id="dummyframe" style="display: none;" onload="if(submitted) { processSubmit(); }"></iframe>
-
-            <form id="right" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQVTGnMgLdjgPTjPCavOHlioyFAWS8UfgyY_52zjRY7-Dpxw/formResponse" 
-                method="post" target="dummyframe" onsubmit="submitted=true;">
-                <fieldset>
-                    <input type="text" tabindex="1" name="entry.349139440" required autofocus>
-                </fieldset>
-                <fieldset>
-                    <input type="text" tabindex="2" name="entry.1927541922" required>
-                </fieldset>
-                <fieldset>
-                    <textarea placeholder="Project ideas, questions, comments, etc." tabindex="3" name="entry.422534850" rows="10" cols="40" maxlength="1000" required></textarea>
-                </fieldset>
-                <br><br><br><br><br><br><br><br><br><br><br>
-                <fieldset>
-                    <input type="source" tabindex="4" name="entry.1989488195" optional>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <input id="submit" type="submit" value="Submit" style="display: block;">
-                </fieldset>
-                <br>
-                <label id="thankyou" style="margin-left: 1em; display: none;">Thank you for your submission!</label>
-            </form>
         </div>
         <script>insertFooter();</script>
     </div>

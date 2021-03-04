@@ -25,6 +25,10 @@ function insertHeader(page = "") {
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img src="img/icons/social_linkedin.png" width="30" height="30"></a>
+                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="img/icons/social_ig.png" width="30" height="30"></a>           
+            </div>
         </header>
     `;
 
@@ -39,12 +43,7 @@ function insertFooter() {
     const footer = ` 
         <footer>
             <div class="copyright">
-                <p>© Andrea Lam 2020</p>
-            </div>
-            <div class="social">
-                <!-- this will be image, not p -->
-                <p>linkedin</p>
-                <p>instagram</p>
+                <p>© Andrea Lam 2021</p>
             </div>
         </footer>  
     `
