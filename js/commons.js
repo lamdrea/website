@@ -4,13 +4,13 @@
  */
 function insertHeader(page = "") {
     const pageIndex = {
-        // "work": 0,  --commented out wip
-        // "about": 1,
-        // "contact": 2,
-        // "default": null
-        "about": 0,
-        "contact": 1,
+        "work": 0, 
+        "about": 1,
+        "contact": 2,
         "default": null
+        // "about": 0,
+        // "contact": 1,
+        // "default": null
     }[page.toLowerCase()]
 
     const header = `
@@ -21,7 +21,7 @@ function insertHeader(page = "") {
                 </a>
             </div>
             <div class="topnav">
-               <!-- <a href="work.html">Work</a>  -- commented out wip -->
+               <a href="work.html">Work</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
