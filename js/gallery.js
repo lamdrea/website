@@ -4,8 +4,8 @@ function insertGalleryItems(galleryItems) {
         div.setAttribute("class", "gallery-item")
         div.innerHTML = `
             <a href="">
-            <!-- <a href="pages/${galleryItems[title]}.html"> -->
-                <img class="gallery-thumbnail" src=${galleryItems[title]}>
+            <a href="work/${galleryItems[title][1]}">
+                <img class="gallery-thumbnail" src=${galleryItems[title][0]}>
             </a>
             <p class="gallery-title">${title}</p>
         `;
