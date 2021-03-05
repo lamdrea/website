@@ -8,6 +8,10 @@ header {
    display:block;
 }
 
+.title a:hover{
+   color:white;
+}
+
 .topnav a {
    color: white;
 }
