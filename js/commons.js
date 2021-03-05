@@ -1,3 +1,7 @@
+function insertHead() {
+
+}
+
 /**
  * Creates standard header and arg page used to flag active topnav element for bolding
  * @param {String} page Name of page that header is being inserted into
@@ -16,18 +20,18 @@ function insertHeader(page = "") {
     const header = `
         <header>
             <div class="title">
-                <a href="index.html">
+                <a href="/index.html">
                     <p>Andrea Lam</p>
                 </a>
             </div>
             <div class="topnav">
-               <a href="work.html">Work</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+               <a href="/work.html">Work</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
             </div>
             <div class="social">
-                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img src="img/icons/social_linkedin.png" width="30" height="30"></a>
-                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="img/icons/social_ig.png" width="30" height="30"></a>           
+                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img src="/img/icons/social_linkedin.png" width="30" height="30"></a>
+                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png" width="30" height="30"></a>           
             </div>
         </header>
     `;
