@@ -22,21 +22,24 @@
 }
 
 .gallery-item:hover img.gallery-thumbnail {
-    opacity: 0;
+    opacity: 0.2;
 }
 
 .gallery-item p.gallery-title {
     position: absolute;
-    margin: 0;
+    margin: auto;
     top: 50%;
     text-align: center;
-    width: 100%;
+    width: 95%;
+    font-family:'Karla';
+    font-weight:400;
     font-size: calc(20px + 1vw);
     opacity: 0;
     transition: .5s ease;
+    overflow:hidden;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1000px) {
     .gallery-item {
         width: 100%;
     }
