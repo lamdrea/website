@@ -33,6 +33,8 @@ body {
 }
 
 .content {
+/* specific content style for non-portfolio page, left aligned and scalable */
+.contentLeft {
     float: left;
     display: inline;
     /* margin-left: 15%;
