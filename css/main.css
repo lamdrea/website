@@ -19,7 +19,7 @@ body {
     display: block;
     position: relative;
     padding-bottom: 50px;
-    /* background-color: #f0303f; */
+    background-color: #f0303f;
 }
 
 /* specific block style for non-portfolio pages; shorter in width */
@@ -45,25 +45,7 @@ body {
     /* border-style: solid; */
 }
 
-@media screen and (max-width: 700px) {
-    /* .content {
-        width: 100%;
-    } */
 
-    .portfolioContent{
-        width:100%;
-    }
-    .portfolioContent img{
-        width:100%;
-    }
-}
-
-/* @media screen and (min-width: 1000px) {
-    .content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
 
 
 /* full-width content style */
@@ -196,7 +178,7 @@ footer {
 }
 
 .copyright {
-    float: right;
+    float: ;
     font-family: 'Karla';
     font-weight:300;
     font-size:16px;
@@ -205,13 +187,38 @@ footer {
     padding-right:.5em;
 }
 
+
+
+/* Navigation container */
+.topnavWrapper {
+    display:flex;
+    position:fixed;
+    /* float: left; */
+    /* height: 100px; */
+    /* padding-top: .8em; */
+    /* padding-left: 15em; */
+    margin:26px auto;
+    /* font-family: 'Karla'; */
+    justify-content:flex-start;
+    align-items:center;
+    background-color: lightblue;
+    width:84.8%;
+    float:right;
+}
+
+/* .navLeft{
+    flex:1;
+    justify-content:flex-start;
+    align-items:center;
+    border:1;
+} */
+
 .title {
     float: left;
-    height: 100px;
-    padding-top: 1em;
-    font-family: "brandon-grotesque";
-    font-weight: 700;
-    text-transform: uppercase;
+    /* display:block; */
+    width:max-content;
+    /* height: 100px; */
+    /* padding-top: 1em; */
     /* background-color: #333; */
 }
 
@@ -225,31 +232,43 @@ footer {
 }
 
 .title p {
+    font-family: "brandon-grotesque";
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align:left;
+    font-size: 43px;
     /* this allows us to vertically align title text */
     /* look into other ways to do this */
-    margin: 26px 0px;
-    font-size: 43px;
+    /* margin: 26px 0px; */
+    
 }
 
+/* for the navigation links, excluding the title */
 .topnav {
-    float: left;
+    /* vertical-align:text-bottom; */
+    /* display:inline-block; */
+    display:flex;
     height: 100px;
-    padding-top: 1.1em;
-    padding-left: 1.5em;
+    padding-top: 3em;
     font-family: 'Karla';
-    /* background-color: #333; */
+    /* background-color:blue; */
+    /* justify-content:space-evenly; */
+ 
+    
 }
-
-.topnav a {
-    float: left;
-    color: black;
+.topnav a{
+    /* display:inline-block; */
+    /* flex:1 1 200px; */
+    /* color: blue; */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 19px;
     font-weight:400;
+    color:black;
+    margin:auto;
     /* this allows us to vertically align title text */
-    margin: 30px 0px;
+    /* margin: 30px 0px; */
 }
 
 .topnav a:hover {
@@ -263,24 +282,47 @@ footer {
     /* text-decoration: underline 1px; */
 }
 
-.social {
-    float: right;
-    display:flex;
-    align-items:flex-end;
-    height: inherit;
-    /* background-color: lightblue; */
+.topnavWrapper .icon{
+    display:none;
+    color:black;
 }
 
+
+.social {
+    /* position:absolute; */
+    /* text-align:right; */
+    /* float: right; */
+    /* display:inline-block; */
+    /* align-self:flex-end; */
+    flex:1;
+    display:flex;
+    justify-content:right;
+    align-items:center;
+    background-color: red;
+    margin-left:auto;
+    /* align-self:right; */
+}
+
+/* .social .icon{
+    display:none;
+} */
+
 .social img {
+    display:inline-block;
     width: 16;
     height: 16;
-    padding: 0px 8px;
-    padding-bottom:15px;
+    /* padding: 0px 8px; */
+    /* padding-bottom:15px; */
     /* vertical-align:sub; */
 }
 
 .social img:hover{
     filter:invert(.5);
+}
+
+.social i{
+    padding: 0 8px;
+    padding-bottom:13px;
 }
 
 a{
@@ -386,3 +428,52 @@ input[type=source]{
 .smallButton:active{
     transform:translate(1px,2px);
 }
+
+/* When screen is < 700px */
+@media screen and (max-width: 700px) {
+    .portfolioContent{
+        width:100%;
+    }
+    .portfolioContent img{
+        width:100%;
+    }
+
+    /* social and nav disappears */
+    .social img{
+        display:none;
+    }
+    .topnav a{
+        display:none;
+    }
+    /* icon appears here */
+    .topnavWrapper a.icon{
+        float:right;
+        display:inline-block;
+    }
+    .title{
+        display:inline;
+    }
+}
+
+/*what clicking the thing will do?????? idk/??*/
+/* "responsive" class added to topnav with JS when user clicks the icon? */
+@media screen and (max-width: 700px) {
+    .topnav.responsive{position:relative;}
+    .topnav.responsive a.icon{
+        position:absolute;
+        right:0;
+        top:0;
+    }
+    .topnav.responsive a{
+        float:none;
+        display:block;
+        text-align:left;
+    }
+}
+
+/* @media screen and (min-width: 1000px) {
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+} */

@@ -8,7 +8,7 @@ function insertHead() {
  */
 function insertHeader(page = "") {
     const pageIndex = {
-        "work": 0, 
+        "work": 0,
         "about": 1,
         "contact": 2,
         "default": null
@@ -19,21 +19,30 @@ function insertHeader(page = "") {
 
     const header = `
         <header>
+        <div class="topnavWrapper" id="topNavID">
+     
             <div class="title">
                 <a href="/index.html">
                     <p>Andrea Lam</p>
                 </a>
             </div>
             <div class="topnav">
-               <a href="/work.html">Work</a>
+                <a href="/work.html">Work</a>
                 <a href="/about.html">About</a>
                 <a href="/contact.html">Contact</a>
             </div>
+        
             <div class="social">
-                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img src="/img/icons/social_linkedin.png" width="30" height="30"></a>
-                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png" width="30" height="30"></a>           
+                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img
+                    src="/img/icons/social_linkedin.png" width="30" height="30"></a>
+                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png"
+                    width="30" height="30"></a>
+                <a href="javascript:void(0);" class="icon" onclick="headerStack()">
+                    <i class="fa fa-bars"></i></a>
             </div>
-        </header>
+        </div>
+
+         </header>
     `;
 
     document.write(header);
@@ -51,6 +60,17 @@ function insertFooter() {
             </div>
         </footer>  
     `
-    
+
     document.write(footer);
+}
+
+// THIS IS WHAT CLICKING THE BURGER WILL DO - OPENS A MENU
+// Toggles between adding/removing the "responsive" class to topnav when user clicks the icon
+function headerStack() {
+    var x = document.getElementById("topnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
 }
