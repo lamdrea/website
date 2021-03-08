@@ -2,7 +2,7 @@ function insertHead() {
     const header = `
     
         <title>Andrea Lam | Biomedical Communicator & Digital Artist</title>
-        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link type="text/css" rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="https://use.typekit.net/hyu2voi.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link
