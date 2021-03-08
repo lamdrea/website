@@ -50,7 +50,6 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     text-align:left;
-    font-size: 43px;    
 }
 
 /* topnav = for the navigation links, excluding the title */
@@ -366,6 +365,64 @@ input[type=source]{
     transform:translate(1px,2px);
 }
 
+.overlay{
+    display:none;
+    height:100%;
+    width:100%;
+    position:fixed;
+    z-index:1; /*Sits on top*/
+    top:0;
+    left:0;
+    background-color:rgba(255, 255, 255, 0.95);
+    overflow-x:hidden; /*Disable horizontal scroll*/
+}
+
+.overlay-content{
+    position:relative;
+    width:100%;
+    text-align:center;
+    top:25%;
+    margin-top:2%;
+}
+
+.overlay a{
+    text-decoration:none;
+    font-size:calc(1rem + 7vmin);
+    color:black;
+    padding:.1em .3em .15em .3em;
+    line-height:1.5em;
+
+    /* background:#4976ff;
+    background: linear-gradient(to left, #fff 50%, #4976ff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom; */
+
+    /* transition: all .5s ease;  */
+   
+}
+
+.overlay a:hover{
+    color:#4976ff;
+    background-position:left bottom;
+}
+
+.overlay img{
+    padding:0;
+    /* transition:all .5s ease; */
+}
+
+.overlay img:hover{
+    filter:invert(.5);
+    
+}
+
+.overlay .closebtn{
+    position:absolute;
+    top:20px;
+    right:45px;
+    font-size:60px;
+}
+
 /* NTS: ICON BURGER doesn't appear on the landing page */
 /* When screen is < 750px */
 @media screen and (max-width: 750px) {
@@ -388,10 +445,21 @@ input[type=source]{
         float:right;
         display:inline-block;
     }
-    .title{
-        display:inline;
-    }
+    
+    /* overlay menu */
 }
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and 
+position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    /* .overlay a {font-size: 20px} */
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
 
 /*what clicking the thing will do?????? idk/??*/
 /* "responsive" class added to topnav with JS when user clicks the icon? */

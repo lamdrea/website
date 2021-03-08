@@ -54,11 +54,28 @@ function insertHeader(page = "") {
                     src="/img/icons/social_linkedin.png" width="30" height="30"></a>
                 <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png"
                     width="30" height="30"></a>
-                <a href="javascript:void(0);" onclick="headerStack()">
+                <a href="javascript:void(0);" onclick="openNav()">
                     <i class="fa fa-bars"></i></a>
             </div>
         </div>
 
+        <div id="overlayNav" class="overlay">
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="/work.html">Work</a><br>
+                <a href="/about.html">About</a><br>
+                <a href="/contact.html">Contact</a><br><br>
+
+                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img
+                    src="/img/icons/social_linkedin.png" width="30" height="30"></a>
+                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png"
+                    width="30" height="30"></a>
+            </div>
+
+         </div>
          </header>
     `;
 
@@ -81,13 +98,23 @@ function insertFooter() {
     document.write(footer);
 }
 
-// THIS IS WHAT CLICKING THE BURGER WILL DO - OPENS A MENU
-// Toggles between adding/removing the "responsive" class to topnav when user clicks the icon
-function headerStack() {
-    var x = document.getElementById("topnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
+// Open and close overlay navigation
+function openNav(){
+    document.getElementById("overlayNav").style.display="block";
 }
+    
+
+function closeNav(){
+    document.getElementById("overlayNav").style.display="none";
+}
+
+// // THIS IS WHAT CLICKING THE BURGER WILL DO - OPENS A MENU
+// // Toggles between adding/removing the "responsive" class to topnav when user clicks the icon
+// function headerStack() {
+//     var x = document.getElementById("topnav");
+//     if (x.className === "topnav") {
+//         x.className += " responsive";
+//     } else {
+//         x.className = "topnav";
+//     }
+// }
