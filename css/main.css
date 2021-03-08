@@ -50,6 +50,8 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     text-align:left;
+    font-size: 43px;  
+    letter-spacing:1px;  
 }
 
 /* topnav = for the navigation links, excluding the title */
