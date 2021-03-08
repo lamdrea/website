@@ -1,5 +1,23 @@
 function insertHead() {
+    const header = `
+    
+        <title>Andrea Lam | Biomedical Communicator & Digital Artist</title>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.typekit.net/hyu2voi.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap"
+            rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    
+    `
+
+    document.write(header);
 }
 
 /**
@@ -8,7 +26,7 @@ function insertHead() {
  */
 function insertHeader(page = "") {
     const pageIndex = {
-        "work": 0, 
+        "work": 0,
         "about": 1,
         "contact": 2,
         "default": null
@@ -19,27 +37,52 @@ function insertHeader(page = "") {
 
     const header = `
         <header>
+        <div class="topnavWrapper" id="topNavID">
             <div class="title">
                 <a href="/index.html">
                     <p>Andrea Lam</p>
                 </a>
             </div>
             <div class="topnav">
-               <a href="/work.html">Work</a>
+                <a href="/work.html">Work</a>
                 <a href="/about.html">About</a>
                 <a href="/contact.html">Contact</a>
             </div>
+        
             <div class="social">
-                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img src="/img/icons/social_linkedin.png" width="30" height="30"></a>
-                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png" width="30" height="30"></a>           
+                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img
+                    src="/img/icons/social_linkedin.png" width="30" height="30"></a>
+                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png"
+                    width="30" height="30"></a>
+                <a href="javascript:void(0);" onclick="openNav()">
+                    <i class="fa fa-bars"></i></a>
             </div>
-        </header>
+        </div>
+
+        <div id="overlayNav" class="overlay">
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="/work.html">Work</a><br>
+                <a href="/about.html">About</a><br>
+                <a href="/contact.html">Contact</a><br><br>
+
+                <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img
+                    src="/img/icons/social_linkedin.png" width="30" height="30"></a>
+                <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png"
+                    width="30" height="30"></a>
+            </div>
+
+         </div>
+         </header>
     `;
 
     document.write(header);
+
     if (pageIndex !== undefined) {
-        document.getElementsByClassName("topnav")[0].children[pageIndex]
-            .setAttribute("class", "active");
+        document.getElementsByClassName("topnav")[0].children[pageIndex].setAttribute("style", "color:black;");
     }
 }
 
@@ -51,6 +94,27 @@ function insertFooter() {
             </div>
         </footer>  
     `
-    
+
     document.write(footer);
 }
+
+// Open and close overlay navigation
+function openNav(){
+    document.getElementById("overlayNav").style.display="block";
+}
+    
+
+function closeNav(){
+    document.getElementById("overlayNav").style.display="none";
+}
+
+// // THIS IS WHAT CLICKING THE BURGER WILL DO - OPENS A MENU
+// // Toggles between adding/removing the "responsive" class to topnav when user clicks the icon
+// function headerStack() {
+//     var x = document.getElementById("topnav");
+//     if (x.className === "topnav") {
+//         x.className += " responsive";
+//     } else {
+//         x.className = "topnav";
+//     }
+// }

@@ -6,6 +6,7 @@ header {
    color: white;
    margin-left:8vw;
    display:block;
+   letter-spacing:1px;
 }
 
 .title a:hover{
@@ -27,6 +28,11 @@ header {
 
 .social img:hover{
    filter:invert(1);
+}
+
+.social i:hover{
+   filter:invert(1);
+   color:black;
 }
 
 .landing {
