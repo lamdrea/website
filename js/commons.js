@@ -20,7 +20,6 @@ function insertHeader(page = "") {
     const header = `
         <header>
         <div class="topnavWrapper" id="topNavID">
-     
             <div class="title">
                 <a href="/index.html">
                     <p>Andrea Lam</p>
@@ -37,7 +36,7 @@ function insertHeader(page = "") {
                     src="/img/icons/social_linkedin.png" width="30" height="30"></a>
                 <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png"
                     width="30" height="30"></a>
-                <a href="javascript:void(0);" class="icon" onclick="headerStack()">
+                <a href="javascript:void(0);" onclick="headerStack()">
                     <i class="fa fa-bars"></i></a>
             </div>
         </div>
@@ -46,9 +45,9 @@ function insertHeader(page = "") {
     `;
 
     document.write(header);
+
     if (pageIndex !== undefined) {
-        document.getElementsByClassName("topnav")[0].children[pageIndex]
-            .setAttribute("class", "active");
+        document.getElementsByClassName("topnav")[0].children[pageIndex].setAttribute("style", "color:black;");
     }
 }
 

@@ -1,4 +1,7 @@
-html,
+html{
+    height:100%
+}
+
 body {
     height: 100%;
     position: relative;
@@ -7,9 +10,111 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    max-width: 92%;
+    max-width: 84%;
     line-height:1.25;
-    /* border-style: solid; */
+}
+
+header {
+    width: 100%;
+    float:left;
+}
+
+/* Navigation container */
+.topnavWrapper {
+    display:flex;
+    padding:26px 0 0 0;
+    justify-content:flex-start;
+    align-items:center;
+    float:left;
+    width:100%;
+}
+
+
+.title {
+    float: left;
+    width:max-content;
+    /* background-color: #333; */
+}
+
+.title a {
+    color: black;
+    text-decoration: none;
+}
+
+.title a:hover{
+    color:black;
+}
+
+.title p {
+    font-family: "brandon-grotesque";
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align:left;
+    font-size: 43px;    
+}
+
+/* topnav = for the navigation links, excluding the title */
+.topnav {
+    display:flex;
+    font-family: 'Karla';
+    padding-left: 1.4em;
+    
+}
+.topnav a{
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight:400;
+    color:black;
+}
+
+.topnav a:hover {
+    /* background-color: #ddd; */
+    color:#4976ff;
+}
+
+.social {
+    flex:1;
+    display:flex;
+    justify-content:right;
+    align-items:center;
+    margin-left:auto;
+}
+
+.social i{
+    display:none;
+    color:black;
+    margin-top:12px;
+}
+
+.social i:hover{
+    color:#4976ff;
+}
+
+.social img {
+    display:inline-block;
+    width: 16;
+    height: 16;
+    padding: 0px 5px;
+}
+
+.social img:hover{
+    filter:invert(.5);
+}
+
+.social i{
+    padding: 0 8px;
+    padding-bottom:13px;
+}
+
+a{
+    color:lightcoral;
+    text-decoration:none;
+}
+
+a:hover{
+    color: #4976ff;
 }
 
 .wrapper {
@@ -19,14 +124,12 @@ body {
     display: block;
     position: relative;
     padding-bottom: 50px;
-    background-color: #f0303f;
 }
 
 /* specific block style for non-portfolio pages; shorter in width */
 .contentWrapper{
     float:center;
     display:flex;
-    /* background-color:purple; */
     max-width:1400px;
     width:100%;
     margin: 0 auto 0 auto;
@@ -36,17 +139,9 @@ body {
 .contentLeft {
     float: left;
     display: inline;
-    /* margin-left: 15%;
-    margin-right: auto; */
-    /* margin-bottom: 1%; */
-    /* width: 100%; */
     width: 750px;
     margin-top:1%;
-    /* border-style: solid; */
 }
-
-
-
 
 /* full-width content style */
 .content {
@@ -56,8 +151,6 @@ body {
     margin-bottom: 10%;
     width: 100%;
     margin-top:1%;
-    /* background-color:lightblue; */
-    /* border-style: solid; */
 }
 
 .portfolioContent{
@@ -134,15 +227,6 @@ p.portfolio2{
     margin-right:auto;
 }
 
-header {
-    width: 100%;
-    height: 100px;
-    margin: auto;
-    margin-bottom: 5%;
-    margin-top:
-    /* background-color: #gray; */
-}
-
 h2 {
     font-size: 35px;
     font-family: 'Rubik';
@@ -178,160 +262,13 @@ footer {
 }
 
 .copyright {
-    float: ;
+    float: right;
     font-family: 'Karla';
     font-weight:300;
     font-size:16px;
     color: rgb(0, 0, 0);
     padding-bottom:1em;
     padding-right:.5em;
-}
-
-
-
-/* Navigation container */
-.topnavWrapper {
-    display:flex;
-    position:fixed;
-    /* float: left; */
-    /* height: 100px; */
-    /* padding-top: .8em; */
-    /* padding-left: 15em; */
-    margin:26px auto;
-    /* font-family: 'Karla'; */
-    justify-content:flex-start;
-    align-items:center;
-    background-color: lightblue;
-    width:84.8%;
-    float:right;
-}
-
-/* .navLeft{
-    flex:1;
-    justify-content:flex-start;
-    align-items:center;
-    border:1;
-} */
-
-.title {
-    float: left;
-    /* display:block; */
-    width:max-content;
-    /* height: 100px; */
-    /* padding-top: 1em; */
-    /* background-color: #333; */
-}
-
-.title a {
-    color: black;
-    text-decoration: none;
-}
-
-.title a:hover{
-    color:black;
-}
-
-.title p {
-    font-family: "brandon-grotesque";
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align:left;
-    font-size: 43px;
-    /* this allows us to vertically align title text */
-    /* look into other ways to do this */
-    /* margin: 26px 0px; */
-    
-}
-
-/* for the navigation links, excluding the title */
-.topnav {
-    /* vertical-align:text-bottom; */
-    /* display:inline-block; */
-    display:flex;
-    height: 100px;
-    padding-top: 3em;
-    font-family: 'Karla';
-    /* background-color:blue; */
-    /* justify-content:space-evenly; */
- 
-    
-}
-.topnav a{
-    /* display:inline-block; */
-    /* flex:1 1 200px; */
-    /* color: blue; */
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 19px;
-    font-weight:400;
-    color:black;
-    margin:auto;
-    /* this allows us to vertically align title text */
-    /* margin: 30px 0px; */
-}
-
-.topnav a:hover {
-    /* background-color: #ddd; */
-    color:#4976ff;
-}
-
-.topnav a.active {
-    /* background-color: #4CAF50; */
-    color: black;
-    /* text-decoration: underline 1px; */
-}
-
-.topnavWrapper .icon{
-    display:none;
-    color:black;
-}
-
-
-.social {
-    /* position:absolute; */
-    /* text-align:right; */
-    /* float: right; */
-    /* display:inline-block; */
-    /* align-self:flex-end; */
-    flex:1;
-    display:flex;
-    justify-content:right;
-    align-items:center;
-    background-color: red;
-    margin-left:auto;
-    /* align-self:right; */
-}
-
-/* .social .icon{
-    display:none;
-} */
-
-.social img {
-    display:inline-block;
-    width: 16;
-    height: 16;
-    /* padding: 0px 8px; */
-    /* padding-bottom:15px; */
-    /* vertical-align:sub; */
-}
-
-.social img:hover{
-    filter:invert(.5);
-}
-
-.social i{
-    padding: 0 8px;
-    padding-bottom:13px;
-}
-
-a{
-    color:lightcoral;
-    text-decoration:none;
-}
-
-a:hover{
-    color: #4976ff;
 }
 
 .content li{
@@ -429,8 +366,9 @@ input[type=source]{
     transform:translate(1px,2px);
 }
 
-/* When screen is < 700px */
-@media screen and (max-width: 700px) {
+/* NTS: ICON BURGER doesn't appear on the landing page */
+/* When screen is < 750px */
+@media screen and (max-width: 750px) {
     .portfolioContent{
         width:100%;
     }
@@ -446,7 +384,7 @@ input[type=source]{
         display:none;
     }
     /* icon appears here */
-    .topnavWrapper a.icon{
+    .social i{
         float:right;
         display:inline-block;
     }
@@ -457,7 +395,7 @@ input[type=source]{
 
 /*what clicking the thing will do?????? idk/??*/
 /* "responsive" class added to topnav with JS when user clicks the icon? */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     .topnav.responsive{position:relative;}
     .topnav.responsive a.icon{
         position:absolute;
