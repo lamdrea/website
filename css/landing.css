@@ -30,6 +30,11 @@ header {
    filter:invert(1);
 }
 
+.social i:hover{
+   filter:invert(1);
+   color:black;
+}
+
 .landing {
    position: fixed;
    top: 0;

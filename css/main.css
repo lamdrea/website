@@ -425,7 +425,6 @@ input[type=source]{
     font-size:60px;
 }
 
-/* NTS: ICON BURGER doesn't appear on the landing page */
 /* When screen is < 750px */
 @media screen and (max-width: 750px) {
     .portfolioContent{
