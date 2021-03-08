@@ -2,7 +2,7 @@ function insertHead() {
     const header = `
     
         <title>Andrea Lam | Biomedical Communicator & Digital Artist</title>
-        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link type="text/css" rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="https://use.typekit.net/hyu2voi.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link
@@ -13,7 +13,7 @@ function insertHead() {
             rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <link rel="shortcut icon" type="image/x-icon" href="/ladybug.ico">
     
     `
 
