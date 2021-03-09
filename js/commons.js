@@ -14,7 +14,17 @@ function insertHead() {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" type="image/x-icon" href="/ladybug.ico">
-    
+
+        <svg class="defs-only">
+            <filter id="monochrome" color-interpolation-filters="sRGB"
+                    x="0" y="0" height="100%" width="100%">
+            <feColorMatrix type="matrix"
+                values="0.95 0 0 0 .1 
+                        0.85 0 0 0 0.2  
+                        0.90 0 0 0 1
+                        0    0 0 1 0" />
+            </filter>
+        </svg>
     `
 
     document.write(header);
@@ -61,7 +71,7 @@ function insertHeader(page = "") {
 
         <div id="overlayNav" class="overlay">
             <!-- Button to close the overlay navigation -->
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" style="text-decoration:none;" onclick="closeNav()">&times;</a>
 
             <!-- Overlay content -->
             <div class="overlay-content">
@@ -82,7 +92,7 @@ function insertHeader(page = "") {
     document.write(header);
 
     if (pageIndex !== undefined) {
-        document.getElementsByClassName("topnav")[0].children[pageIndex].setAttribute("style", "color:black;");
+        document.getElementsByClassName("topnav")[0].children[pageIndex].setAttribute("style", "color:black;text-decoration:none;");
     }
 }
 
@@ -93,6 +103,7 @@ function insertFooter() {
                 <p>© Andrea Lam 2021</p>
             </div>
         </footer>  
+        
     `
 
     document.write(footer);
