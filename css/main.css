@@ -2,6 +2,14 @@ html{
     height:100%
 }
 
+/* Needed for colour filter - ensures matrix in <head> doesn't take up any space */
+.defs-only {
+    position: absolute;
+    height: 0; width: 0;
+    overflow: none;
+    left: -100%;
+  }
+
 body {
     height: 100%;
     position: relative;
@@ -43,6 +51,7 @@ header {
 
 .title a:hover{
     color:black;
+    text-decoration:none;
 }
 
 .title p {
@@ -72,7 +81,8 @@ header {
 
 .topnav a:hover {
     /* background-color: #ddd; */
-    color:#4976ff;
+    color:#27e074;
+    text-decoration: underline 1.5px solid black;
 }
 
 .social {
@@ -90,7 +100,7 @@ header {
 }
 
 .social i:hover{
-    color:#4976ff;
+    color:rgb(12, 77, 255);
 }
 
 .social img {
@@ -101,7 +111,13 @@ header {
 }
 
 .social img:hover{
-    filter:invert(.5);
+    /* filter:invert(.5); */
+    -webkit-filter: url(#monochrome);
+    filter:  url(#monochrome);
+    transition-property:all;
+    transition-timing-function:ease;
+    transition-duration:.3s;
+    
 }
 
 .social i{
@@ -110,12 +126,12 @@ header {
 }
 
 a{
-    color:lightcoral;
+    color:#27e074;
     text-decoration:none;
 }
 
 a:hover{
-    color: #4976ff;
+    text-decoration: underline 2px solid black;
 }
 
 .wrapper {
@@ -290,7 +306,6 @@ form fieldset {
     padding-left:0;
     border:0;
     margin-bottom:.5em;
-    /* background-color:red; */
 }
 
 textarea{
@@ -338,11 +353,12 @@ input[type=source]{
 }
 
 .button:hover{
-    background-color:rgb(235, 235, 235);
+    box-shadow:10px 10px rgb(114, 206, 149);
 }
 
 .button:active{
     transform:translate(1px,2px);
+    box-shadow:9px 8px rgb(114, 206, 149);
 }
 
 .smallButton{
@@ -356,11 +372,11 @@ input[type=source]{
     text-transform:uppercase;
     padding: .75em 1em;
     cursor:pointer;
-    transition-duration:.2s;
+    transition-duration:.4s;
 }
 
 .smallButton:hover{
-    background-color:lightgray;
+    box-shadow:10px 10px rgb(114, 206, 149);
 }
 
 .smallButton:active{
@@ -404,7 +420,8 @@ input[type=source]{
 }
 
 .overlay a:hover{
-    color:#4976ff;
+    color:#27e074;
+    text-decoration: underline 3.5px solid black;
     background-position:left bottom;
 }
 
@@ -414,8 +431,9 @@ input[type=source]{
 }
 
 .overlay img:hover{
-    filter:invert(.5);
-    
+    /* filter:invert(.5); */
+    -webkit-filter: url(#monochrome);
+    filter:  url(#monochrome);
 }
 
 .overlay .closebtn{
@@ -425,8 +443,8 @@ input[type=source]{
     font-size:60px;
 }
 
-/* When screen is < 750px */
-@media screen and (max-width: 750px) {
+/* When screen is < 753px */
+@media screen and (max-width: 760px) {
     .portfolioContent{
         width:100%;
     }
@@ -446,8 +464,24 @@ input[type=source]{
         float:right;
         display:inline-block;
     }
-    
-    /* overlay menu */
+    .title p{
+        font-size: 33px; 
+        transition-property: 'font-size';
+        transition-timing-function: ease;
+        transition-duration: .5s;
+    }
+
+}
+
+/* Shrink the contact form */
+@media screen and (max-width:675px){
+    textarea{
+        width:80vw;
+    }
+
+    input[type=text], input[type=source]{
+        width:80vw;
+    }
 }
 
 
@@ -462,25 +496,3 @@ position the close button again, so they don't overlap */
     }
   }
 
-/*what clicking the thing will do?????? idk/??*/
-/* "responsive" class added to topnav with JS when user clicks the icon? */
-@media screen and (max-width: 750px) {
-    .topnav.responsive{position:relative;}
-    .topnav.responsive a.icon{
-        position:absolute;
-        right:0;
-        top:0;
-    }
-    .topnav.responsive a{
-        float:none;
-        display:block;
-        text-align:left;
-    }
-}
-
-/* @media screen and (min-width: 1000px) {
-    .content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
