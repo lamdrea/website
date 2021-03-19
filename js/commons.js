@@ -92,7 +92,8 @@ function insertHeader(page = "") {
     document.write(header);
 
     if (pageIndex !== undefined) {
-        document.getElementsByClassName("topnav")[0].children[pageIndex].setAttribute("style", "color:black;text-decoration:none;");
+        document.getElementsByClassName("topnav")[0].children[pageIndex].setAttribute("style", 
+            "color:black;text-decoration:none;cursor:default;pointer-events:none;");
     }
 }
 
