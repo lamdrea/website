@@ -77,8 +77,13 @@ header {
    transition: 0.40s ease;
 }
 
-.landing .play-button-ring:hover ~ .play-button-triangle {
+.landing .play-button-ring:hover ~ .play-button-triangle{
    border-left: 16px solid black;
+   transition: 0.40s ease;
+}
+
+.landing .play-button-ring:hover ~ h1{
+   opacity:1;
    transition: 0.40s ease;
 }
 
@@ -108,6 +113,18 @@ header {
    animation-duration: 4s;   
    animation-timing-function: ease-out;
    animation-fill-mode: forwards;
+}
+
+.landing h1{
+   position:absolute;
+   top:56%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   font-size:15px;
+   color:white;
+   text-transform:uppercase;
+   font-weight:400;
+   opacity:0;
 }
 
 @keyframes img-ani {
