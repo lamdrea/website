@@ -77,12 +77,13 @@ header {
     font-size: 19px;
     font-weight:400;
     color:black;
+    transition: 0.2s;
 }
 
 .topnav a:hover {
     /* background-color: #ddd; */
     color:#27e074;
-    text-decoration: underline 1.5px solid black;
+    text-decoration: none;
 }
 
 .social {
@@ -99,8 +100,9 @@ header {
     margin-top:12px;
 }
 
+/* Hover colour for hamburger icon */
 .social i:hover{
-    color:rgb(12, 77, 255);
+    color:#27e074; 
 }
 
 .social img {
@@ -111,12 +113,10 @@ header {
 }
 
 .social img:hover{
-    /* filter:invert(.5); */
-    -webkit-filter: url(#monochrome);
-    filter:  url(#monochrome);
+    filter:  invert(65%) sepia(68%) saturate(465%) hue-rotate(91deg) brightness(93%);
     transition-property:all;
     transition-timing-function:ease;
-    transition-duration:.3s;
+    transition-duration:.1s;
     
 }
 
@@ -431,9 +431,8 @@ input[type=source]{
 }
 
 .overlay img:hover{
-    /* filter:invert(.5); */
-    -webkit-filter: url(#monochrome);
-    filter:  url(#monochrome);
+    filter:  invert(65%) sepia(68%) saturate(465%) hue-rotate(91deg) brightness(93%);
+    transition: .1s;
 }
 
 .overlay .closebtn{
@@ -443,8 +442,8 @@ input[type=source]{
     font-size:60px;
 }
 
-/* When screen is < 753px */
-@media screen and (max-width: 760px) {
+/* Collapse the nav and social icons when the screen is less than 830px wide */
+@media screen and (max-width: 830px) {
     .portfolioContent{
         width:100%;
     }
@@ -467,7 +466,6 @@ input[type=source]{
     .title p{
         font-size: 33px; 
         transition-property: 'font-size';
-        transition-timing-function: ease;
         transition-duration: .5s;
     }
 

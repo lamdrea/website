@@ -64,6 +64,8 @@ function insertHeader(page = "") {
                     src="/img/icons/social_linkedin.png" width="30" height="30"></a>
                 <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png"
                     width="30" height="30"></a>
+                <a href="https://www.github.com/lamdrea" target="_blank"><img src="/img/icons/social_github.png"
+                    width="30" height="30"></a>
                 <a href="javascript:void(0);" onclick="openNav()">
                     <i class="fa fa-bars"></i></a>
             </div>
@@ -82,6 +84,8 @@ function insertHeader(page = "") {
                 <a href="https://www.linkedin.com/in/andrearlam/" target="_blank"><img
                     src="/img/icons/social_linkedin.png" width="30" height="30"></a>
                 <a href="https://www.instagram.com/1littlelam.jpg" target="_blank"><img src="/img/icons/social_ig.png"
+                    width="30" height="30"></a>
+                <a href="https://www.github.com/lamdrea" target="_blank"><img src="/img/icons/social_github.png"
                     width="30" height="30"></a>
             </div>
 
