@@ -16,7 +16,7 @@
     object-fit: cover;
 }
 
-.gallery-item:hover h5 {
+.gallery-item:hover h3 {
     opacity: 1;
     pointer-events: none;
 }
@@ -30,7 +30,7 @@
     transition: 0.2s;
 }
 
-.gallery-item h5 {
+.gallery-item h3 {
     position: absolute;
     margin: auto;
     top: 45%;

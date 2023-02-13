@@ -6,9 +6,9 @@ function insertGalleryItems(galleryItems) {
             <a href="work/${galleryItems[title][2]}">
                 <img class="gallery-thumbnail" src=${galleryItems[title][1]}>
             </a>
-            <h5>
+            <h3>
                 ${title}
-            </h5>
+            </h3>
             <h4>${galleryItems[title][0]}</h4>
         `;
 
