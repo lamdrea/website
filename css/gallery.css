@@ -16,24 +16,42 @@
     object-fit: cover;
 }
 
-.gallery-item:hover p.gallery-title {
+.gallery-item:hover h3 {
     opacity: 1;
     pointer-events: none;
 }
 
-.gallery-item:hover img.gallery-thumbnail {
-    opacity: 0.2;
+.gallery-item:hover h4 {
+    opacity: 1;
 }
 
-.gallery-item p.gallery-title {
+.gallery-item:hover img.gallery-thumbnail {
+    opacity: 0.1;
+    transition: 0.2s;
+}
+
+.gallery-item h3 {
     position: absolute;
     margin: auto;
-    top: 50%;
+    top: 45%;
     text-align: center;
     width: 95%;
     font-family:'Karla';
     font-weight:400;
     font-size: calc(20px + 1vw);
+    opacity: 0;
+    transition: .5s ease;
+    overflow:hidden;
+}
+
+.gallery-item h4 {
+    position: absolute; 
+    margin: auto;
+    top: calc(45% + 15px + 1.5*(12px + .75vw));
+    font-size: calc(12px + .5vw);
+    font-weight: 300;
+    text-align: center;
+    width: 95%;
     opacity: 0;
     transition: .5s ease;
     overflow:hidden;
