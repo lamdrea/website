@@ -227,13 +227,6 @@ p.portfolio{
     /* background-color:blue; */
 }
 
-p.portfolio2{
-    max-width:1000px;
-    margin:auto;
-    font-weight:400;
-    font-size:93%;
-}
-
 /* p.backNav{
     max-width:1000px;
     font-weight:400;
@@ -267,6 +260,8 @@ h2 {
     font-size: 35px;
     font-family: 'Rubik';
     font-weight: 400;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 /* h3 {
