@@ -1,14 +1,15 @@
-html{
-    height:100%
+html {
+    height: 100%
 }
 
 /* Needed for colour filter - ensures matrix in <head> doesn't take up any space */
 .defs-only {
     position: absolute;
-    height: 0; width: 0;
+    height: 0;
+    width: 0;
     overflow: none;
     left: -100%;
-  }
+}
 
 body {
     height: 100%;
@@ -19,28 +20,28 @@ body {
     font-weight: 400;
     font-size: 20px;
     max-width: 84%;
-    line-height:1.25;
+    line-height: 1.25;
 }
 
 header {
     width: 100%;
-    float:left;
+    float: left;
 }
 
 /* Navigation container */
 .topnavWrapper {
-    display:flex;
-    padding:26px 0 0 0;
-    justify-content:flex-start;
-    align-items:center;
-    float:left;
-    width:100%;
+    display: flex;
+    padding: 26px 0 0 0;
+    justify-content: flex-start;
+    align-items: center;
+    float: left;
+    width: 100%;
 }
 
 
 .title {
     float: left;
-    width:max-content;
+    width: max-content;
     /* background-color: #333; */
 }
 
@@ -49,88 +50,89 @@ header {
     text-decoration: none;
 }
 
-.title a:hover{
-    color:black;
-    text-decoration:none;
+.title a:hover {
+    color: black;
+    text-decoration: none;
 }
 
 .title p {
     font-family: "brandon-grotesque";
     font-weight: 700;
     text-transform: uppercase;
-    text-align:left;
-    font-size: 43px;  
-    letter-spacing:1px;  
+    text-align: left;
+    font-size: 43px;
+    letter-spacing: 1px;
 }
 
 /* topnav = for the navigation links, excluding the title */
 .topnav {
-    display:flex;
+    display: flex;
     font-family: 'Karla';
     padding-left: 1.4em;
-    
+
 }
-.topnav a{
+
+.topnav a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 19px;
-    font-weight:400;
-    color:black;
+    font-weight: 400;
+    color: black;
     transition: 0.2s;
 }
 
 .topnav a:hover {
     /* background-color: #ddd; */
-    color:#27e074;
+    color: #27e074;
     text-decoration: none;
 }
 
 .social {
-    flex:1;
-    display:flex;
-    justify-content:right;
-    align-items:center;
-    margin-left:auto;
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: auto;
 }
 
-.social i{
-    display:none;
-    color:black;
-    margin-top:12px;
+.social i {
+    display: none;
+    color: black;
+    margin-top: 12px;
 }
 
 /* Hover colour for hamburger icon */
-.social i:hover{
-    color:#27e074; 
+.social i:hover {
+    color: #27e074;
 }
 
 .social img {
-    display:inline-block;
+    display: inline-block;
     width: 16;
     height: 16;
     padding: 0px 5px;
 }
 
-.social img:hover{
-    filter:  invert(65%) sepia(68%) saturate(465%) hue-rotate(91deg) brightness(93%);
-    transition-property:all;
-    transition-timing-function:ease;
-    transition-duration:.1s;
-    
+.social img:hover {
+    filter: invert(65%) sepia(68%) saturate(465%) hue-rotate(91deg) brightness(93%);
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: .1s;
+
 }
 
-.social i{
+.social i {
     padding: 0 8px;
-    padding-bottom:13px;
+    padding-bottom: 13px;
 }
 
-a{
-    color:#27e074;
-    text-decoration:none;
+a {
+    color: #27e074;
+    text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline 2px solid black;
 }
 
@@ -144,11 +146,11 @@ a:hover{
 }
 
 /* specific block style for non-portfolio pages; shorter in width */
-.contentWrapper{
-    float:center;
-    display:flex;
-    max-width:1400px;
-    width:100%;
+.contentWrapper {
+    float: center;
+    display: flex;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto 0 auto;
 }
 
@@ -157,7 +159,7 @@ a:hover{
     float: left;
     display: inline;
     width: 750px;
-    margin-top:1%;
+    margin-top: 1%;
 }
 
 /* full-width content style */
@@ -167,62 +169,80 @@ a:hover{
     margin: 0 auto;
     margin-bottom: 10%;
     width: 100%;
-    margin-top:1%;
+    margin-top: 1%;
 }
 
-.portfolio-desc-wrapper{
+.portfolio-desc-wrapper {
     width: 100%;
-    max-width:1000px;
-    display:flex;
+    max-width: 1000px;
+    display: flex;
     margin: auto auto 2em;
 }
 
-.portfolio-desc{
+.portfolio-desc {
     width: 85%;
 }
 
-.portfolio-details{
+.portfolio-details {
     width: 15%;
-    margin-left:3em;
-    font-size:15px;
+    margin-left: 3em;
+    font-size: 15px;
     color: rgb(171, 171, 171)
 }
 
-.portfolioContent{
-    display:block;
+.portfolioContent {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1%;
-    margin-top:auto;
+    margin-top: auto;
 }
 
-.portfolioContent img{
+.portfolioContent img {
     height: auto;
-    max-height:100vh;
-    max-width:100%;
+    max-height: 100vh;
+    max-width: 100%;
     /* max-width:550px; */
-    padding-top:1em;
+    padding-top: 1em;
 }
 
 /* important psuedo-object for vertical aligning */
-.portfolioContent:before{
-    content:"";
-    display:inline-block;
-    vertical-align:middle;
+.portfolioContent:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
     /* height:100%; */
 }
 
+.row {
+    display: flex;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+}
+
+.process {
+    text-align: left;
+    font-size: 15px;
+}
+
+
 /* for the illustration page, vertically aligned and responsive */
-img.imageStack{
-    display:inline-block;
-    vertical-align:middle;
+img.imageStack {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* main portfolio body text */
-p.portfolio{
-    max-width:1000px;
-    margin:auto;
-    font-weight:400;
+p.portfolio {
+    max-width: 1000px;
+    margin: auto;
+    font-weight: 400;
     /* font-size:13px; */
     /* background-color:blue; */
 }
@@ -234,26 +254,28 @@ p.portfolio{
     padding-top:3.5em;
 } */
 
-.videoWrapper{
-    position:relative;
-    padding-bottom:56.25%; /*should be 56.25% for 16:9*/
-    height:0;
+.videoWrapper {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: calc(1000/1920*100%);
+    /*should be 56.25% for 16:9*/
+    height: 0;
 }
 
-.videoWrapper iframe{
-    position:absolute;
+.videoWrapper iframe {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    max-height:563px;
+    max-height: 563px;
 }
 
-.center{
-    display:block;
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
+.center {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2 {
@@ -272,29 +294,30 @@ h2 {
 } */
 
 /* all caps subheading */
-h4{
-    text-transform:uppercase;
-    font-weight:300;
+h4 {
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 /* For the "details" title subheaders */
-h5{
-    text-transform:uppercase;
-    font-weight:500;
+h5 {
+    text-transform: uppercase;
+    font-weight: 500;
     font-size: 13px;
     margin: 0 auto 0;
     letter-spacing: 1px;
     color: black;
 }
 
-hr{
-    opacity:.2;
+hr {
+    opacity: .2;
     margin: 4em auto 2em;
     width: 50%;
 }
-hr.solid{
-    color:rgb(243, 243, 243);
-    width:90%;
+
+hr.solid {
+    color: rgb(243, 243, 243);
+    width: 90%;
 }
 
 footer {
@@ -303,25 +326,25 @@ footer {
     /* left: 5%; */
     width: 100%;
     height: 50px;
-    text-align: center; 
+    text-align: center;
     /* background-color: #883c3c; */
 }
 
 .copyright {
     float: right;
     font-family: 'Karla';
-    font-weight:300;
-    font-size:16px;
+    font-weight: 300;
+    font-size: 16px;
     color: rgb(0, 0, 0);
-    padding-bottom:1em;
-    padding-right:.5em;
+    padding-bottom: 1em;
+    padding-right: .5em;
 }
 
-.content li{
-    list-style-type:disc;
-    padding-left:2em;
-    max-width:1000px;
-    margin:auto;
+.content li {
+    list-style-type: disc;
+    padding-left: 2em;
+    max-width: 1000px;
+    margin: auto;
 }
 
 form {
@@ -331,113 +354,115 @@ form {
 
 form fieldset {
     height: 1em;
-    padding-bottom:1em;
-    padding-left:0;
-    border:0;
-    margin-bottom:.5em;
+    padding-bottom: 1em;
+    padding-left: 0;
+    border: 0;
+    margin-bottom: .5em;
 }
 
-textarea{
-    width:550px;
-    background-color:rgb(241, 241, 241);
-    margin-top:.3em;
-    padding:.8em 1em;
+textarea {
+    width: 550px;
+    background-color: rgb(241, 241, 241);
+    margin-top: .3em;
+    padding: .8em 1em;
     border: 2px solid lightgray;
-    font-family:inherit;
-    font-size:17px;
+    font-family: inherit;
+    font-size: 17px;
 }
 
-input[type=text]{
-    width:550px;
-    background-color:rgb(241, 241, 241);
-    margin-top:.3em;
-    padding:.8em 1em;
+input[type=text] {
+    width: 550px;
+    background-color: rgb(241, 241, 241);
+    margin-top: .3em;
+    padding: .8em 1em;
     border: 2px solid lightgray;
-    font-family:inherit;
-    font-size:17px;
+    font-family: inherit;
+    font-size: 17px;
 }
 
-input[type=source]{
-    width:550px;
-    background-color:rgb(241, 241, 241);
-    margin-top:.3em;
-    padding:.8em 1em;
+input[type=source] {
+    width: 550px;
+    background-color: rgb(241, 241, 241);
+    margin-top: .3em;
+    padding: .8em 1em;
     border: 2px solid lightgray;
-    font-family:inherit;
-    font-size:17px;
+    font-family: inherit;
+    font-size: 17px;
 }
 
-.button{
+.button {
     background-color: black;
-    border:0;
-    color:white;
-    text-align:center;
-    font-family:'Karla';
-    font-size:24px;
-    font-weight:200;
-    text-transform:uppercase;
+    border: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Karla';
+    font-size: 24px;
+    font-weight: 200;
+    text-transform: uppercase;
     padding: .75em 1.2em;
-    cursor:pointer;
-    transition-duration:.2s;
+    cursor: pointer;
+    transition-duration: .2s;
 }
 
-.button:hover{
-    box-shadow:10px 10px rgb(114, 206, 149);
+.button:hover {
+    box-shadow: 10px 10px rgb(114, 206, 149);
 }
 
-.button:active{
-    transform:translate(1px,2px);
-    box-shadow:9px 8px rgb(114, 206, 149);
+.button:active {
+    transform: translate(1px, 2px);
+    box-shadow: 9px 8px rgb(114, 206, 149);
 }
 
-.smallButton{
-    background-color:black;
-    border:0;
-    color:white;
-    text-align:center;
-    font-family:'Karla';
-    font-size:18px;
-    font-weight:300;
-    text-transform:uppercase;
+.smallButton {
+    background-color: black;
+    border: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Karla';
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
     padding: .75em 1em;
-    cursor:pointer;
-    transition-duration:.4s;
+    cursor: pointer;
+    transition-duration: .4s;
 }
 
-.smallButton:hover{
-    box-shadow:10px 10px rgb(114, 206, 149);
+.smallButton:hover {
+    box-shadow: 10px 10px rgb(114, 206, 149);
 }
 
-.smallButton:active{
-    transform:translate(1px,2px);
+.smallButton:active {
+    transform: translate(1px, 2px);
 }
 
-.overlay{
-    display:none;
-    height:100%;
-    width:100%;
-    position:fixed;
-    z-index:1; /*Sits on top*/
-    top:0;
-    left:0;
-    background-color:rgba(255, 255, 255, 0.95);
-    overflow-x:hidden; /*Disable horizontal scroll*/
+.overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    /*Sits on top*/
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow-x: hidden;
+    /*Disable horizontal scroll*/
 }
 
-.overlay-content{
-    position:relative;
-    width:100%;
-    text-align:center;
-    top:25%;
-    margin-top:2%;
+.overlay-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 25%;
+    margin-top: 2%;
 }
 
-.overlay a{
-    text-decoration:none;
-    font-size:calc(1rem + 7vmin);
-    color:black;
-    padding:.1em .3em .15em .3em;
-    line-height:1.5em;
+.overlay a {
+    text-decoration: none;
+    font-size: calc(1rem + 7vmin);
+    color: black;
+    padding: .1em .3em .15em .3em;
+    line-height: 1.5em;
 
     /* background:#4976ff;
     background: linear-gradient(to left, #fff 50%, #4976ff 50%);
@@ -445,69 +470,87 @@ input[type=source]{
     background-position: right bottom; */
 
     /* transition: all .5s ease;  */
-   
+
 }
 
-.overlay a:hover{
-    color:#27e074;
+.overlay a:hover {
+    color: #27e074;
     text-decoration: underline 3.5px solid black;
-    background-position:left bottom;
+    background-position: left bottom;
 }
 
-.overlay img{
-    padding:0;
+.overlay img {
+    padding: 0;
     /* transition:all .5s ease; */
 }
 
-.overlay img:hover{
-    filter:  invert(65%) sepia(68%) saturate(465%) hue-rotate(91deg) brightness(93%);
+.overlay img:hover {
+    filter: invert(65%) sepia(68%) saturate(465%) hue-rotate(91deg) brightness(93%);
     transition: .1s;
 }
 
-.overlay .closebtn{
-    position:absolute;
-    top:20px;
-    right:45px;
-    font-size:60px;
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
 }
 
 /* Collapse the nav and social icons when the screen is less than 830px wide */
 @media screen and (max-width: 830px) {
-    .portfolioContent{
-        width:100%;
+    .portfolioContent {
+        width: 100%;
     }
-    .portfolioContent img{
-        width:100%;
+
+    .portfolioContent img {
+        width: 100%;
     }
 
     /* social and nav disappears */
-    .social img{
-        display:none;
+    .social img {
+        display: none;
     }
-    .topnav a{
-        display:none;
+
+    .topnav a {
+        display: none;
     }
+
     /* icon appears here */
-    .social i{
-        float:right;
-        display:inline-block;
+    .social i {
+        float: right;
+        display: inline-block;
     }
-    .title p{
-        font-size: 33px; 
+
+    .title p {
+        font-size: 33px;
         transition-property: 'font-size';
         transition-duration: .5s;
+    }
+
+    .portfolio-desc-wrapper {
+        flex-direction: column;
+    }
+
+    .portfolio-details{
+        width:100%;
+        margin-left: 0;
+        margin-top: 2em;
+    }
+    .portfolio-desc{
+        width:100%;
     }
 
 }
 
 /* Shrink the contact form */
-@media screen and (max-width:675px){
-    textarea{
-        width:80vw;
+@media screen and (max-width:675px) {
+    textarea {
+        width: 80vw;
     }
 
-    input[type=text], input[type=source]{
-        width:80vw;
+    input[type=text],
+    input[type=source] {
+        width: 80vw;
     }
 }
 
@@ -515,11 +558,11 @@ input[type=source]{
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and 
 position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
+
     /* .overlay a {font-size: 20px} */
     .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
-  }
-
+}
