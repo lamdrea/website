@@ -1,6 +1,15 @@
 function insertHead() {
-    const header = `
-    
+    const header = ` 
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XM7VD47X1B"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XM7VD47X1B');
+        </script>
+
         <title>Andrea Lam | Biomedical Communicator & Digital Artist</title>
         <link type="text/css" rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="https://use.typekit.net/hyu2voi.css">
@@ -96,7 +105,7 @@ function insertHeader(page = "") {
     document.write(header);
 
     if (pageIndex !== undefined) {
-        document.getElementsByClassName("topnav")[0].children[pageIndex].setAttribute("style", 
+        document.getElementsByClassName("topnav")[0].children[pageIndex].setAttribute("style",
             "color:black;text-decoration:none;cursor:default;pointer-events:none;");
     }
 }
@@ -115,13 +124,13 @@ function insertFooter() {
 }
 
 // Open and close overlay navigation
-function openNav(){
-    document.getElementById("overlayNav").style.display="block";
+function openNav() {
+    document.getElementById("overlayNav").style.display = "block";
 }
-    
 
-function closeNav(){
-    document.getElementById("overlayNav").style.display="none";
+
+function closeNav() {
+    document.getElementById("overlayNav").style.display = "none";
 }
 
 // // THIS IS WHAT CLICKING THE BURGER WILL DO - OPENS A MENU
